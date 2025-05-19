@@ -1,0 +1,79 @@
+.appContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: #333;
+}
+
+.componentSection {
+  margin-bottom: 48px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.componentSection h2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.linkGroup {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.grid3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .grid3col {
+    grid-template-columns: 1fr;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .linkGroup {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+/* Notification animation */
+.notificationEnter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.notificationEnterActive {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.notificationExit {
+  opacity: 1;
+}
+.notificationExitActive {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 300ms, transform 300ms;
+}
